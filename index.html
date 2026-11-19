@@ -8,7 +8,7 @@
     <meta name="keywords" content="نجار بجدة جوهرة جدة للنجارة تركيب غرف نوم بجدة فك وتركيب غرف نوم تركيب اثاث ايكيا بجدة جزامات ايكيا دواليب ايكيا صيانة دواليب سحاب تصليح سراحات تغيير مفصلات وسحابات تغيير كوالين ابواب وزنية باب الشقة تركيب ستاير وبراويز بجدة">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: Tahoma, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; padding-bottom: 135px; }
+        body { font-family: Tahoma, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; padding-bottom: 105px; }
 
         .bismillah-bar {
             background: linear-gradient(90deg, #0a192f, #172a45, #0a192f);
@@ -193,17 +193,15 @@
             width: 100%;
         }
         .avatar-circle {
-            width: 46px;
-            height: 46px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
             flex-shrink: 0;
             color: #ffffff;
-            font-weight: bold;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.16);
         }
         .comment-bubble {
             background: #ffffff;
@@ -250,19 +248,22 @@
             font-size: 18px;
         }
 
-        .fixed-right-buttons {
+        .bottom-row-buttons {
             position: fixed;
-            bottom: 16px;
+            bottom: 14px;
+            left: 14px;
             right: 14px;
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
             z-index: 9999;
         }
-        .float-btn {
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
+        .row-float-btn {
+            flex: 1;
+            height: 52px;
+            border-radius: 28px;
             color: #ffffff;
             text-decoration: none;
             display: flex;
@@ -270,13 +271,13 @@
             justify-content: center;
             box-shadow: 0 4px 14px rgba(0,0,0,0.32);
         }
-        .float-btn:active {
-            transform: scale(0.95);
+        .row-float-btn:active {
+            transform: scale(0.97);
         }
-        .btn-whatsapp-fixed {
+        .btn-whatsapp-row {
             background-color: #25d366;
         }
-        .btn-call-fixed {
+        .btn-call-row {
             background-color: #1e3c72;
             border: 2px solid #ffffff;
         }
@@ -406,13 +407,13 @@
 
     </div>
 
-    <div class="fixed-right-buttons">
-        <a href="https://wa.me/966565743171?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%84%D8%AF%D9%8A%20%D8%B4%D8%BA%D9%84%20%D9%86%D8%AC%D8%A7%D8%B1%D8%A9%20%D9%88%D8%B5%D9%8A%D8%A7%D9%86%D8%A9%20%D9%81%D9%8A%20%D8%AC%D8%AF%D8%A9%20%D9%88%D8%B3%D8%A3%D8%B1%D8%B3%D9%84%20%D9%84%D9%83%20%D8%A7%D9%84%D8%B5%D9%88%D8%B1%20%D8%A7%D9%84%D8%A2%D9%86%20%D9%84%D8%AA%D9%81%D9%8A%D8%AF%D9%86%D9%8A%20%D9%88%D8%AA%D8%B9%D8%B7%D9%8A%D9%86%D9%8A%20%D8%A7%D9%84%D8%AA%D9%83%D9%84%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9" class="float-btn btn-whatsapp-fixed" aria-label="واتساب">
+    <div class="bottom-row-buttons">
+        <a href="https://wa.me/966565743171?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%84%D8%AF%D9%8A%20%D8%B4%D8%BA%D9%84%20%D9%86%D8%AC%D8%A7%D8%B1%D8%A9%20%D9%88%D8%B5%D9%8A%D8%A7%D9%86%D8%A9%20%D9%81%D9%8A%20%D8%AC%D8%AF%D8%A9%20%D9%88%D8%B3%D8%A3%D8%B1%D8%B3%D9%84%20%D9%84%D9%83%20%D8%A7%D9%84%D8%B5%D9%88%D8%B1%20%D8%A7%D9%84%D8%A2%D9%86%20%D9%84%D8%AA%D9%81%D9%8A%D8%AF%D9%86%D9%8A%20%D9%88%D8%AA%D8%B9%D8%B7%D9%8A%D9%86%D9%8A%20%D8%A7%D9%84%D8%AA%D9%83%D9%84%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9" class="row-float-btn btn-whatsapp-row" aria-label="واتساب">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20.52 3.48A11.82 11.82 0 0 0 12.07 0C5.49 0 .14 5.35.14 11.93c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.79 1.48h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.18-3.51-8.42zm-8.45 18.33h-.01a9.88 9.88 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.64-.24-.37a9.85 9.85 0 0 1-1.51-5.27c0-5.46 4.44-9.9 9.91-9.9 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.9-9.91 9.9zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
             </svg>
         </a>
-        <a href="tel:0565743171" class="float-btn btn-call-fixed" aria-label="اتصال">
+        <a href="tel:0565743171" class="row-float-btn btn-call-row" aria-label="اتصال">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/>
             </svg>
@@ -471,22 +472,27 @@
             }
         }, 3200);
 
+        const manIcon = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="7" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7v1H4v-1z"/></svg>`;
+        const womanIcon = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a4.5 4.5 0 0 0-4.5 4.5c0 1.4.6 2.6 1.6 3.5-2.1.9-3.6 3-3.6 5.5V18h13v-1.5c0-2.5-1.5-4.6-3.6-5.5 1-.9 1.6-2.1 1.6-3.5A4.5 4.5 0 0 0 12 3z"/></svg>`;
+        const starIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+        const checkIcon = `<svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+
         const commentsData = [
-            { avatar: "👨🏽", bg: "#1877f2", name: "عبدالله الغامدي", text: "ما شاء الله تبارك الله شغل نظيف جدا ركب لي غرفة نوم كاملة ودولاب سحاب في حي الحمدانية في وقت قياسي", time: "منذ ساعتين" },
-            { avatar: "🌸", bg: "#e91e63", name: "نورة القحطاني", text: "طلبتهم لتركيب دولاب إيكيا وجزامة إيكيا مع ستاير الصالة قمة في الذوق والدقة بالميزان الله يبارك لهم", time: "منذ 4 ساعات" },
-            { avatar: "🌿", bg: "#009688", name: "فهد الحربي", text: "افضل نجار تعاملت معه في جدة ضبط لي وزنية باب الشقة وابواب الغرف وغير الكوالين بشغل احترافي", time: "منذ 6 ساعات" },
-            { avatar: "🐱", bg: "#ff9800", name: "سارة الزهراني", text: "كان عندي سحابات السراحة خربانة ومفصلات الدولاب مكسورة صلحوها كلها ورجع الدولاب كأنه جديد", time: "منذ 9 ساعات" },
-            { avatar: "⭐", bg: "#3f51b5", name: "خالد المالكي", text: "التزام بالمواعيد وأمانة في الشغل فكوا لي غرفتين نوم ونقلوها وركبوها بدون خدش واحد", time: "منذ يوم" },
-            { avatar: "🌷", bg: "#9c27b0", name: "ريم العتيبي", text: "انصح بالتعامل مع جوهرة جدة ركبوا لي كل اغراض إيكيا والبراويز بكل اتقان واسعارهم ممتازة", time: "منذ يوم" },
-            { avatar: "🛠️", bg: "#4caf50", name: "سلطان الشهري", text: "فني فاهم شغله صح عدل لي دولاب سحاب كان يعلق وغير لي المفصلات لهيدروليك اصلي", time: "منذ يومين" },
-            { avatar: "🌺", bg: "#f44336", name: "أم فيصل", text: "يعطيهم العافية ما قصروا جو في نفس الموعد وركبوا الستائر في البيت كامل شغل مرتب ونظيف", time: "منذ يومين" },
-            { avatar: "🏠", bg: "#607d8b", name: "تركي الغامدي", text: "تجميع سرير إيكيا ودولاب 6 ابواب تم باحترافية عالية وسرعة في الانجاز شكرا جوهرة جدة", time: "منذ 3 أيام" },
-            { avatar: "🐈", bg: "#795548", name: "مها السلمي", text: "والله شغلهم يبيض الوجه ثبتوا لي السرير وراح الصوت نهائيا وغيروا كالون باب الغرفة", time: "منذ 3 أيام" },
-            { avatar: "✨", bg: "#2196f3", name: "ماجد الحربي", text: "جوني في حي السلامة وخلصوا صيانة جميع الدواليب السحاب والعادية في اقل من ساعتين", time: "منذ 4 أيام" },
-            { avatar: "🌼", bg: "#ff5722", name: "لمى الزهراني", text: "تعامل راقي جدا وخصم حقيقي ركبوا لي جزامة إيكيا وبراويز الصالة بميزان دقيق", time: "منذ 5 أيام" },
-            { avatar: "🔑", bg: "#00bcd4", name: "بندر العتيبي", text: "كانت ابواب الغرف تحك في البلاط وزنتوها لي بالكامل وصارت تقفل بكل هدوء الله يوفقكم", time: "منذ 5 أيام" },
-            { avatar: "🍃", bg: "#8bc34a", name: "أريج باوزير", text: "فكوا غرفة النوم القديمة وركبوا الجديدة مع السراحة والدواليب شغل متقن وسريع", time: "منذ أسبوع" },
-            { avatar: "👍", bg: "#673ab7", name: "سعد الشهري", text: "أفضل نجار في جدة دقة في المواعيد ونظافة في المكان بعد انتهاء الشغل", time: "منذ أسبوع" }
+            { icon: manIcon, bg: "#1877f2", name: "عبدالله الغامدي", text: "ما شاء الله تبارك الله شغل نظيف جدا ركب لي غرفة نوم كاملة ودولاب سحاب في حي الحمدانية في وقت قياسي", time: "منذ ساعتين" },
+            { icon: womanIcon, bg: "#e91e63", name: "نورة القحطاني", text: "طلبتهم لتركيب دولاب إيكيا وجزامة إيكيا مع ستاير الصالة قمة في الذوق والدقة بالميزان الله يبارك لهم", time: "منذ 4 ساعات" },
+            { icon: manIcon, bg: "#009688", name: "فهد الحربي", text: "افضل نجار تعاملت معه في جدة ضبط لي وزنية باب الشقة وابواب الغرف وغير الكوالين بشغل احترافي", time: "منذ 6 ساعات" },
+            { icon: womanIcon, bg: "#ff9800", name: "سارة الزهراني", text: "كان عندي سحابات السراحة خربانة ومفصلات الدولاب مكسورة صلحوها كلها ورجع الدولاب كأنه جديد", time: "منذ 9 ساعات" },
+            { icon: manIcon, bg: "#3f51b5", name: "خالد المالكي", text: "التزام بالمواعيد وأمانة في الشغل فكوا لي غرفتين نوم ونقلوها وركبوها بدون خدش واحد", time: "منذ يوم" },
+            { icon: womanIcon, bg: "#9c27b0", name: "ريم العتيبي", text: "انصح بالتعامل مع جوهرة جدة ركبوا لي كل اغراض إيكيا والبراويز بكل اتقان واسعارهم ممتازة", time: "منذ يوم" },
+            { icon: manIcon, bg: "#4caf50", name: "سلطان الشهري", text: "فني فاهم شغله صح عدل لي دولاب سحاب كان يعلق وغير لي المفصلات لهيدروليك اصلي", time: "منذ يومين" },
+            { icon: womanIcon, bg: "#f44336", name: "أم فيصل", text: "يعطيهم العافية ما قصروا جو في نفس الموعد وركبوا الستائر في البيت كامل شغل مرتب ونظيف", time: "منذ يومين" },
+            { icon: manIcon, bg: "#607d8b", name: "تركي الغامدي", text: "تجميع سرير إيكيا ودولاب 6 ابواب تم باحترافية عالية وسرعة في الانجاز شكرا جوهرة جدة", time: "منذ 3 أيام" },
+            { icon: womanIcon, bg: "#795548", name: "مها السلمي", text: "والله شغلهم يبيض الوجه ثبتوا لي السرير وراح الصوت نهائيا وغيروا كالون باب الغرفة", time: "منذ 3 أيام" },
+            { icon: manIcon, bg: "#2196f3", name: "ماجد الحربي", text: "جوني في حي السلامة وخلصوا صيانة جميع الدواليب السحاب والعادية في اقل من ساعتين", time: "منذ 4 أيام" },
+            { icon: womanIcon, bg: "#ff5722", name: "لمى الزهراني", text: "تعامل راقي جدا وخصم حقيقي ركبوا لي جزامة إيكيا وبراويز الصالة بميزان دقيق", time: "منذ 5 أيام" },
+            { icon: starIcon, bg: "#00bcd4", name: "بندر العتيبي", text: "كانت ابواب الغرف تحك في البلاط وزنتوها لي بالكامل وصارت تقفل بكل هدوء الله يوفقكم", time: "منذ 5 أيام" },
+            { icon: womanIcon, bg: "#8bc34a", name: "أريج باوزير", text: "فكوا غرفة النوم القديمة وركبوا الجديدة مع السراحة والدواليب شغل متقن وسريع", time: "منذ أسبوع" },
+            { icon: checkIcon, bg: "#673ab7", name: "سعد الشهري", text: "أفضل نجار في جدة دقة في المواعيد ونظافة في المكان بعد انتهاء الشغل", time: "منذ أسبوع" }
         ];
 
         let currentComment = 0;
@@ -496,7 +502,7 @@
         function renderComment() {
             const c = commentsData[currentComment];
             commentDisplay.innerHTML = `
-                <div class="avatar-circle" style="background:${c.bg};">${c.avatar}</div>
+                <div class="avatar-circle" style="background:${c.bg};">${c.icon}</div>
                 <div class="comment-bubble">
                     <div class="comment-name">${c.name}</div>
                     <div class="comment-msg">${c.text}</div>
