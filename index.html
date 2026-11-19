@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة جوهرة جدة للنجارة وتركيب الأثاث وصيانة الدواليب بجدة</title>
-    <meta name="description" content="مؤسسة جوهرة جدة للنجارة في جدة فك وتركيب وتجميع غرف النوم تركيب أثاث إيكيا صيانة  الدواليب السحاب والعادية تغيير الكوالين والمفصلات وزنية الأبواب وتركيب الستائر">
-    <meta name="keywords" content="نجار بجدة, مؤسسة جوهرة جدة للنجارة, تركيب غرف نوم بجدة, فك وتركيب غرف نوم, تركيب اثاث ايكيا بجدة, جزامات ايكيا, دواليب ايكيا, صيانة دواليب سحاب, تصليح سراحات, تغيير مفصلات وسحابات, تغيير كوالين ابواب, وزنية باب الشقة, تركيب ستاير وبراويز بجدة">
+    <title>جوهرة جدة للنجارة وتركيب الأثاث وصيانة الدواليب بجدة</title>
+    <meta name="description" content="جوهرة جدة للنجارة في جدة فك وتركيب وتجميع غرف النوم تركيب أثاث إيكيا صيانة الدواليب السحاب والعادية تغيير الكوالين والمفصلات وزنية الأبواب وتركيب الستائر">
+    <meta name="keywords" content="نجار بجدة, جوهرة جدة للنجارة, تركيب غرف نوم بجدة, فك وتركيب غرف نوم, تركيب اثاث ايكيا بجدة, جزامات ايكيا, دواليب ايكيا, صيانة دواليب سحاب, تصليح سراحات, تغيير مفصلات وسحابات, تغيير كوالين ابواب, وزنية باب الشقة, تركيب ستاير وبراويز بجدة">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: Tahoma, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; padding-bottom: 130px; }
+        body { font-family: Tahoma, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; padding-bottom: 135px; }
         
-        /* شريط بسم الله الرحمن الرحيم */
         .bismillah-bar {
             background: linear-gradient(90deg, #0a192f, #172a45, #0a192f);
             color: #ffd700;
@@ -18,11 +17,9 @@
             padding: 12px 10px;
             font-size: 19px;
             font-weight: bold;
-            letter-spacing: 0.5px;
             border-bottom: 2px solid #ffd700;
         }
 
-        /* الترويسة الرئيسية */
         .hero-header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: #ffffff;
@@ -34,7 +31,6 @@
             font-size: 27px;
             margin-bottom: 12px;
             color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         .hero-intro {
             font-size: 15.5px;
@@ -53,7 +49,6 @@
             font-size: 16px;
             padding: 7px 20px;
             border-radius: 25px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.25);
         }
 
         .container {
@@ -70,7 +65,6 @@
             font-weight: bold;
         }
 
-        /* بطاقات الخدمات المفصلة */
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -94,7 +88,6 @@
             line-height: 1.65;
         }
 
-        /* معرض الصور المتحرك */
         .slider-section {
             background: #ffffff;
             border-radius: 14px;
@@ -113,7 +106,6 @@
         .marquee-wrapper {
             width: 100%;
             overflow: hidden;
-            position: relative;
         }
         .marquee-track {
             display: flex;
@@ -134,7 +126,6 @@
             100% { transform: translateX(50%); }
         }
 
-        /* قسم تعليقات الفيسبوك */
         .fb-comments-box {
             background: #ffffff;
             border-radius: 14px;
@@ -153,11 +144,15 @@
             color: #1c1e21;
             font-size: 16px;
         }
+        .comments-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
         .comment-item {
             display: flex;
             align-items: flex-start;
             gap: 10px;
-            margin-bottom: 14px;
         }
         .avatar {
             width: 40px;
@@ -170,7 +165,6 @@
             flex-shrink: 0;
             color: #fff;
             font-weight: bold;
-            overflow: hidden;
         }
         .comment-body {
             background-color: #f0f2f5;
@@ -198,7 +192,6 @@
             font-weight: bold;
         }
 
-        /* عداد المشاهدات الحي */
         .live-counter-bar {
             background: #1c1e21;
             color: #ffffff;
@@ -211,15 +204,9 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         .eye-icon {
             font-size: 19px;
-            animation: pulseEye 1.5s infinite;
-        }
-        @keyframes pulseEye {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
         }
         #viewCount {
             color: #ffd700;
@@ -227,7 +214,6 @@
             font-size: 18px;
         }
 
-        /* أزرار الاتصال والواتساب الثابتة أسفل اليمين */
         .fixed-right-buttons {
             position: fixed;
             bottom: 16px;
@@ -249,10 +235,6 @@
             font-weight: bold;
             font-size: 15.5px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
-        }
-        .float-btn:active {
-            transform: scale(0.96);
         }
         .btn-whatsapp-fixed {
             background-color: #25d366;
@@ -268,9 +250,9 @@
     <div class="bismillah-bar">بسم الله الرحمن الرحيم</div>
 
     <header class="hero-header">
-        <h1>مؤسسة جوهرة جدة للنجارة وتركيب الأثاث</h1>
+        <h1>جوهرة جدة للنجارة وتركيب الأثاث</h1>
         <div class="hero-intro">
-            نقدم لكم في مؤسسة جوهرة جدة أعلى مستويات الدقة والاحترافية في جميع أعمال النجارة المنزلية وصيانة الدواليب وتركيب وتجميع غرف النوم وأثاث إيكيا في كافة أحياء جدة بسرعة وصول والتزام تام بالمواعيد
+            نقدم لكم في جوهرة جدة أعلى مستويات الدقة والاحترافية في جميع أعمال النجارة المنزلية وصيانة الدواليب وتركيب وتجميع غرف النوم وأثاث إيكيا في كافة أحياء جدة بسرعة وصول والتزام تام بالمواعيد
         </div>
         <div class="offer-tag">خصم 34% على كافة أعمال النجارة والصيانة</div>
     </header>
@@ -323,7 +305,6 @@
 
         </div>
 
-        <!-- معرض الصور المتحرك -->
         <div class="slider-section">
             <h3 class="slider-title">نماذج من أعمالنا في جدة</h3>
             <div class="marquee-wrapper">
@@ -333,7 +314,6 @@
                     <img src="3.jpg" alt="صيانة دواليب سحاب ومفصلات">
                     <img src="4.jpg" alt="تغيير كوالين ووزنية ابواب">
                     <img src="5.jpg" alt="تركيب ستاير وبراويز">
-                    <!-- تكرار الصور لاستمرار الحركة بسلاسة -->
                     <img src="1.jpg" alt="تركيب غرف نوم بجدة">
                     <img src="2.jpg" alt="تركيب دواليب وجزامات ايكيا">
                     <img src="3.jpg" alt="صيانة دواليب سحاب ومفصلات">
@@ -343,202 +323,200 @@
             </div>
         </div>
 
-        <!-- قسم التعليقات بنمط الفيسبوك -->
         <div class="fb-comments-box">
             <div class="fb-header">
-                <span>آراء وتقييمات العملاء (15 تعليق)</span>
+                <span>آراء وتقييمات العملاء 15 تعليق</span>
                 <span style="color: #1877f2; font-size: 13px;">الأكثر صلة</span>
             </div>
+            <div class="comments-list">
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#1877f2;">👨🏽</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">عبدالله الغامدي</div>
-                        <div class="comment-text">ما شاء الله تبارك الله شغل نظيف جدا ركب لي غرفة نوم كاملة ودولاب سحاب في حي الحمدانية في وقت قياسي</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#1877f2;">👨🏽</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">عبدالله الغامدي</div>
+                            <div class="comment-text">ما شاء الله تبارك الله شغل نظيف جدا ركب لي غرفة نوم كاملة ودولاب سحاب في حي الحمدانية في وقت قياسي</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ ساعتين</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ ساعتين</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#e91e63;">🌸</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">نورة القحطاني</div>
-                        <div class="comment-text">طلبتهم لتركيب دولاب إيكيا وجزامة إيكيا مع ستاير الصالة قمة في الذوق والدقة بالميزان الله يبارك لهم</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#e91e63;">🌸</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">نورة القحطاني</div>
+                            <div class="comment-text">طلبتهم لتركيب دولاب إيكيا وجزامة إيكيا مع ستاير الصالة قمة في الذوق والدقة بالميزان الله يبارك لهم</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 4 ساعات</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 4 ساعات</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#009688;">🧑🏻</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">Fahad Alharbi</div>
-                        <div class="comment-text">افضل نجار تعاملت معه في جدة ضبط لي وزنية باب الشقة وابواب الغرف وغير الكوالين بشغل احترافي</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#009688;">🧑🏻</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">فهد الحربي</div>
+                            <div class="comment-text">افضل نجار تعاملت معه في جدة ضبط لي وزنية باب الشقة وابواب الغرف وغير الكوالين بشغل احترافي</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 6 ساعات</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 6 ساعات</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#ff9800;">🐱</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">سارة الزهراني</div>
-                        <div class="comment-text">كان عندي سحابات السراحة خربانة ومفصلات الدولاب مكسورة صلحوها كلها ورجع الدولاب كأنه جديد</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#ff9800;">🐱</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">سارة الزهراني</div>
+                            <div class="comment-text">كان عندي سحابات السراحة خربانة ومفصلات الدولاب مكسورة صلحوها كلها ورجع الدولاب كأنه جديد</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 9 ساعات</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 9 ساعات</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#3f51b5;">🧔🏽</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">خالد المالكي</div>
-                        <div class="comment-text">التزام بالمواعيد وأمانة في الشغل فكوا لي غرفتين نوم ونقلوها وركبوها بدون خدش واحد</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#3f51b5;">🧔🏽</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">خالد المالكي</div>
+                            <div class="comment-text">التزام بالمواعيد وأمانة في الشغل فكوا لي غرفتين نوم ونقلوها وركبوها بدون خدش واحد</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ يوم</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ يوم</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#9c27b0;">👩🏻</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">Reem Alotaibi</div>
-                        <div class="comment-text">انصح بالتعامل مع مؤسسة جوهرة جدة ركبوا لي كل اغراض إيكيا والبراويز بكل اتقان واسعارهم ممتازة</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#9c27b0;">👩🏻</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">ريم العتيبي</div>
+                            <div class="comment-text">انصح بالتعامل مع جوهرة جدة ركبوا لي كل اغراض إيكيا والبراويز بكل اتقان واسعارهم ممتازة</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ يوم</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ يوم</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#4caf50;">👨🏻‍💼</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">سلطان الشهري</div>
-                        <div class="comment-text">فني فاهم شغله صح عدل لي دولاب سحاب كان يعلق وغير لي المفصلات لهيدروليك اصلي</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#4caf50;">👨🏻‍💼</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">سلطان الشهري</div>
+                            <div class="comment-text">فني فاهم شغله صح عدل لي دولاب سحاب كان يعلق وغير لي المفصلات لهيدروليك اصلي</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ يومين</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ يومين</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#f44336;">🌺</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">أم فيصل</div>
-                        <div class="comment-text">يعطيهم العافية ما قصروا جو في نفس الموعد وركبوا الستائر في البيت كامل شغل مرتب ونظيف</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#f44336;">🌺</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">أم فيصل</div>
+                            <div class="comment-text">يعطيهم العافية ما قصروا جو في نفس الموعد وركبوا الستائر في البيت كامل شغل مرتب ونظيف</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ يومين</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ يومين</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#607d8b;">🧑🏽</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">Turki Alghamdi</div>
-                        <div class="comment-text">تجميع سرير إيكيا ودولاب 6 ابواب تم باحترافية عالية وسرعة في الانجاز شكرا جوهرة جدة</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#607d8b;">🧑🏽</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">تركي الغامدي</div>
+                            <div class="comment-text">تجميع سرير إيكيا ودولاب 6 ابواب تم باحترافية عالية وسرعة في الانجاز شكرا جوهرة جدة</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 3 أيام</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 3 أيام</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#795548;">🐈</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">مها السلمي</div>
-                        <div class="comment-text">والله شغلهم يبيض الوجه ثبتوا لي السرير وراح الصوت نهائيا وغيروا كالون باب الغرفة</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#795548;">🐈</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">مها السلمي</div>
+                            <div class="comment-text">والله شغلهم يبيض الوجه ثبتوا لي السرير وراح الصوت نهائيا وغيروا كالون باب الغرفة</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 3 أيام</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 3 أيام</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#2196f3;">👨🏽</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">ماجد الحربي</div>
-                        <div class="comment-text">جوني في حي السلامة وخلصوا صيانة جميع الدواليب السحاب والعادية في اقل من ساعتين</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#2196f3;">👨🏽</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">ماجد الحربي</div>
+                            <div class="comment-text">جوني في حي السلامة وخلصوا صيانة جميع الدواليب السحاب والعادية في اقل من ساعتين</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 4 أيام</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 4 أيام</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#ff5722;">🌷</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">Lama Alzahrani</div>
-                        <div class="comment-text">تعامل راقي جدا وخصم حقيقي ركبوا لي جزامة إيكيا وبراويز الصالة بميزان دقيق</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#ff5722;">🌷</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">لمى الزهراني</div>
+                            <div class="comment-text">تعامل راقي جدا وخصم حقيقي ركبوا لي جزامة إيكيا وبراويز الصالة بميزان دقيق</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 5 أيام</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 5 أيام</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#00bcd4;">🧔🏻</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">بندر العتيبي</div>
-                        <div class="comment-text">كانت ابواب الغرف تحك في البلاط وزنتوها لي بالكامل وصارت تقفل بكل هدوء الله يوفقكم</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#00bcd4;">🧔🏻</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">بندر العتيبي</div>
+                            <div class="comment-text">كانت ابواب الغرف تحك في البلاط وزنتوها لي بالكامل وصارت تقفل بكل هدوء الله يوفقكم</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 5 أيام</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ 5 أيام</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#8bc34a;">👩🏽</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">أريج باوزير</div>
-                        <div class="comment-text">فكوا غرفة النوم القديمة وركبوا الجديدة مع السراحة والدواليب شغل متقن وسريع</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#8bc34a;">👩🏽</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">أريج باوزير</div>
+                            <div class="comment-text">فكوا غرفة النوم القديمة وركبوا الجديدة مع السراحة والدواليب شغل متقن وسريع</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ أسبوع</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ أسبوع</span></div>
                 </div>
-            </div>
 
-            <div class="comment-item">
-                <div class="avatar" style="background:#673ab7;">🧑🏻</div>
-                <div class="comment-content" style="flex:1;">
-                    <div class="comment-body">
-                        <div class="comment-author">Saad Alshehri</div>
-                        <div class="comment-text">أفضل مؤسسة نجارة في جدة دقة في المواعيد ونظافة في المكان بعد انتهاء الشغل</div>
+                <div class="comment-item">
+                    <div class="avatar" style="background:#673ab7;">🧑🏻</div>
+                    <div style="flex:1;">
+                        <div class="comment-body">
+                            <div class="comment-author">سعد الشهري</div>
+                            <div class="comment-text">أفضل نجار في جدة دقة في المواعيد ونظافة في المكان بعد انتهاء الشغل</div>
+                        </div>
+                        <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ أسبوع</span></div>
                     </div>
-                    <div class="comment-actions"><span>أعجبني</span><span>رد</span><span>منذ أسبوع</span></div>
                 </div>
-            </div>
 
+            </div>
         </div>
 
-        <!-- عداد المشاهدات الحي فوق الأزرار -->
         <div class="live-counter-bar">
             <span class="eye-icon">👁️</span>
-            <span>عدد مشاهدات الصفحة الآن:</span>
+            <span>عدد مشاهدات الصفحة الآن</span>
             <span id="viewCount">6750</span>
             <span>مشاهدة</span>
         </div>
 
     </div>
 
-    <!-- أزرار الواتساب والاتصال المباشر الثابتة أسفل اليمين -->
     <div class="fixed-right-buttons">
-        <a href="https://wa.me/966565743171?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D8%AC%D9%88%D9%87%D8%B1%D8%A9%20%D8%AC%D8%AF%D8%A9%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%B4%D8%BA%D9%84%20%D9%86%D8%AC%D8%A7%D8%B1%D8%A9%20%D9%88%D8%B3%D8%A3%D8%B5%D9%88%D8%B1%D9%87%20%D9%88%D8%A3%D8%B1%D8%B3%D9%84%D9%87%20%D9%84%D9%83%20%D8%A7%D9%84%D8%A2%D9%86%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8" class="float-btn btn-whatsapp-fixed">
+        <a href="https://wa.me/966565743171?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%AC%D9%88%D9%87%D8%B1%D8%A9%20%D8%AC%D8%AF%D8%A9%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%B4%D8%BA%D9%84%20%D9%86%D8%AC%D8%A7%D8%B1%D8%A9%20%D9%88%D8%B3%D8%A3%D8%B5%D9%88%D8%B1%D9%87%20%D9%88%D8%A3%D8%B1%D8%B3%D9%84%D9%87%20%D9%84%D9%83%20%D8%A7%D9%84%D8%A2%D9%86%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8" class="float-btn btn-whatsapp-fixed">
             <span>💬 واتساب مباشر</span>
         </a>
         <a href="tel:0565743171" class="float-btn btn-call-fixed">
-            <span>📞 اتصال: 0565743171</span>
+            <span>📞 اتصال 0565743171</span>
         </a>
     </div>
 
     <script>
-        // عداد المشاهدات يبدأ من 6750 ويتصاعد تلقائيا
         let count = 6750;
         const counterElement = document.getElementById('viewCount');
         setInterval(() => {
