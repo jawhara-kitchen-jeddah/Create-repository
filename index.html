@@ -102,22 +102,6 @@
             margin-bottom: 12px;
             font-weight: bold;
         }
-        .gallery-stage {
-            position: relative;
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #e9ecef;
-            border: 2px solid #e4e6eb;
-            touch-action: pan-y;
-        }
-        .gallery-stage img {
-            width: 100%;
-            height: 245px;
-            object-fit: cover;
-            display: block;
-            user-select: none;
-        }
         .sleek-bar {
             display: flex;
             align-items: center;
@@ -143,39 +127,6 @@
             background: #e9ecef;
         }
 
-        .lightbox-modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.92);
-            z-index: 10000;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-            flex-direction: column;
-            gap: 14px;
-        }
-        .lightbox-modal.active {
-            display: flex;
-        }
-        .lightbox-modal img {
-            max-width: 95%;
-            max-height: 78vh;
-            border-radius: 10px;
-            object-fit: contain;
-        }
-        .close-lightbox {
-            background: #e53935;
-            color: #ffffff;
-            border: none;
-            border-radius: 20px;
-            padding: 9px 22px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            font-family: Tahoma, Arial, sans-serif;
-        }
-
         .comment-carousel-box {
             min-height: 150px;
             display: flex;
@@ -193,14 +144,15 @@
             width: 100%;
         }
         .avatar-circle {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             color: #ffffff;
+            overflow: hidden;
             box-shadow: 0 2px 6px rgba(0,0,0,0.16);
         }
         .comment-bubble {
@@ -227,6 +179,18 @@
             display: flex;
             gap: 14px;
             font-weight: bold;
+        }
+
+        .thanks-box {
+            margin-top: 14px;
+            background: #eef4ff;
+            border-right: 4px solid #1e3c72;
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: #1e3c72;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
         }
 
         .live-counter-bar {
@@ -344,40 +308,6 @@
         </div>
 
         <div class="showcase-card">
-            <h3 class="showcase-title">نماذج من أعمالنا في جدة</h3>
-            <div class="gallery-stage" id="photoStage" ontouchstart="holdPhoto()" ontouchend="releasePhoto()" onmousedown="holdPhoto()" onmouseup="releasePhoto()" onmouseleave="releasePhoto()">
-                <img id="mainSlideImg" src="1.jpg" alt="تركيب غرف نوم بجدة">
-            </div>
-            <div class="sleek-bar">
-                <button type="button" class="sleek-btn" onclick="prevSlide()" aria-label="السابق">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="11 17 6 12 11 7"></polyline>
-                        <polyline points="18 17 13 12 18 7"></polyline>
-                    </svg>
-                </button>
-                <button type="button" class="sleek-btn" onclick="openLightbox()" aria-label="تكبير">
-                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="7"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        <line x1="11" y1="8" x2="11" y2="14"></line>
-                        <line x1="8" y1="11" x2="14" y2="11"></line>
-                    </svg>
-                </button>
-                <button type="button" class="sleek-btn" onclick="nextSlide()" aria-label="التالي">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="13 17 18 12 13 7"></polyline>
-                        <polyline points="6 17 11 12 6 7"></polyline>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
-            <img id="lightboxImg" src="1.jpg" alt="صورة مكبرة" onclick="event.stopPropagation()">
-            <button type="button" class="close-lightbox" onclick="closeLightbox()">إغلاق</button>
-        </div>
-
-        <div class="showcase-card">
             <h3 class="showcase-title">آراء العملاء</h3>
             <div class="comment-carousel-box" id="commentBox" ontouchstart="holdComment()" ontouchend="releaseComment()" onmousedown="holdComment()" onmouseup="releaseComment()" onmouseleave="releaseComment()">
                 <div class="comment-slide-inner" id="commentDisplay"></div>
@@ -395,6 +325,9 @@
                         <polyline points="6 17 11 12 6 7"></polyline>
                     </svg>
                 </button>
+            </div>
+            <div class="thanks-box">
+                نتقدم بجزيل الشكر والتقدير لجميع عملائنا الكرام على ثقتهم الغالية وكلامهم الطيب وشهادتهم في شغلنا وهذا التقدير يدفعنا دائما لتقديم الأفضل والأدق في خدمة أهل جدة الكرام
             </div>
         </div>
 
@@ -421,78 +354,30 @@
     </div>
 
     <script>
-        const slides = [
-            { src: "1.jpg", alt: "تركيب غرف نوم بجدة" },
-            { src: "2.jpg", alt: "تركيب دواليب وجزامات ايكيا" },
-            { src: "3.jpg", alt: "صيانة دواليب سحاب ومفصلات" },
-            { src: "4.jpg", alt: "تغيير كوالين ووزنية ابواب" },
-            { src: "5.jpg", alt: "تركيب ستاير وبراويز" }
-        ];
-        let currentSlide = 0;
-        let photoPausedByHold = false;
-        const mainImg = document.getElementById("mainSlideImg");
-
-        function renderSlide() {
-            mainImg.src = slides[currentSlide].src;
-            mainImg.alt = slides[currentSlide].alt;
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            renderSlide();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            renderSlide();
-        }
-
-        function holdPhoto() {
-            photoPausedByHold = true;
-        }
-
-        function releasePhoto() {
-            photoPausedByHold = false;
-        }
-
-        function openLightbox() {
-            photoPausedByHold = true;
-            document.getElementById("lightboxImg").src = slides[currentSlide].src;
-            document.getElementById("lightboxModal").classList.add("active");
-        }
-
-        function closeLightbox() {
-            document.getElementById("lightboxModal").classList.remove("active");
-            photoPausedByHold = false;
-        }
-
-        setInterval(() => {
-            if (!photoPausedByHold) {
-                nextSlide();
-            }
-        }, 3200);
-
         const manIcon = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="7" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7v1H4v-1z"/></svg>`;
         const womanIcon = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a4.5 4.5 0 0 0-4.5 4.5c0 1.4.6 2.6 1.6 3.5-2.1.9-3.6 3-3.6 5.5V18h13v-1.5c0-2.5-1.5-4.6-3.6-5.5 1-.9 1.6-2.1 1.6-3.5A4.5 4.5 0 0 0 12 3z"/></svg>`;
-        const starIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+        const saudiFlagIcon = `<svg width="50" height="50" viewBox="0 0 50 50"><rect width="50" height="50" fill="#165b33"/><path d="M12 18h26M15 23h20M18 28h14" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><path d="M13 35h22l-2 2.5H15z" fill="#ffffff"/></svg>`;
+        const starIcon = `<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
         const checkIcon = `<svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+        const heartIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+        const thumbIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
 
         const commentsData = [
             { icon: manIcon, bg: "#1877f2", name: "عبدالله الغامدي", text: "ما شاء الله تبارك الله شغل نظيف جدا ركب لي غرفة نوم كاملة ودولاب سحاب في حي الحمدانية في وقت قياسي", time: "منذ ساعتين" },
             { icon: womanIcon, bg: "#e91e63", name: "نورة القحطاني", text: "طلبتهم لتركيب دولاب إيكيا وجزامة إيكيا مع ستاير الصالة قمة في الذوق والدقة بالميزان الله يبارك لهم", time: "منذ 4 ساعات" },
-            { icon: manIcon, bg: "#009688", name: "فهد الحربي", text: "افضل نجار تعاملت معه في جدة ضبط لي وزنية باب الشقة وابواب الغرف وغير الكوالين بشغل احترافي", time: "منذ 6 ساعات" },
-            { icon: womanIcon, bg: "#ff9800", name: "سارة الزهراني", text: "كان عندي سحابات السراحة خربانة ومفصلات الدولاب مكسورة صلحوها كلها ورجع الدولاب كأنه جديد", time: "منذ 9 ساعات" },
-            { icon: manIcon, bg: "#3f51b5", name: "خالد المالكي", text: "التزام بالمواعيد وأمانة في الشغل فكوا لي غرفتين نوم ونقلوها وركبوها بدون خدش واحد", time: "منذ يوم" },
-            { icon: womanIcon, bg: "#9c27b0", name: "ريم العتيبي", text: "انصح بالتعامل مع جوهرة جدة ركبوا لي كل اغراض إيكيا والبراويز بكل اتقان واسعارهم ممتازة", time: "منذ يوم" },
+            { icon: saudiFlagIcon, bg: "#165b33", name: "فهد الحربي", text: "افضل نجار تعاملت معه في جدة ضبط لي وزنية باب الشقة وابواب الغرف وغير الكوالين بشغل احترافي", time: "منذ 6 ساعات" },
+            { icon: heartIcon, bg: "#e53935", name: "سارة الزهراني", text: "كان عندي سحابات السراحة خربانة ومفصلات الدولاب مكسورة صلحوها كلها ورجع الدولاب كأنه جديد", time: "منذ 9 ساعات" },
+            { icon: starIcon, bg: "#3f51b5", name: "خالد المالكي", text: "التزام بالمواعيد وأمانة في الشغل فكوا لي غرفتين نوم ونقلوها وركبوها بدون خدش واحد", time: "منذ يوم" },
+            { icon: thumbIcon, bg: "#009688", name: "ريم العتيبي", text: "انصح بالتعامل مع جوهرة جدة ركبوا لي كل اغراض إيكيا والبراويز بكل اتقان واسعارهم ممتازة", time: "منذ يوم" },
             { icon: manIcon, bg: "#4caf50", name: "سلطان الشهري", text: "فني فاهم شغله صح عدل لي دولاب سحاب كان يعلق وغير لي المفصلات لهيدروليك اصلي", time: "منذ يومين" },
-            { icon: womanIcon, bg: "#f44336", name: "أم فيصل", text: "يعطيهم العافية ما قصروا جو في نفس الموعد وركبوا الستائر في البيت كامل شغل مرتب ونظيف", time: "منذ يومين" },
-            { icon: manIcon, bg: "#607d8b", name: "تركي الغامدي", text: "تجميع سرير إيكيا ودولاب 6 ابواب تم باحترافية عالية وسرعة في الانجاز شكرا جوهرة جدة", time: "منذ 3 أيام" },
+            { icon: checkIcon, bg: "#673ab7", name: "أم فيصل", text: "يعطيهم العافية ما قصروا جو في نفس الموعد وركبوا الستائر في البيت كامل شغل مرتب ونظيف", time: "منذ يومين" },
+            { icon: saudiFlagIcon, bg: "#165b33", name: "تركي الغامدي", text: "تجميع سرير إيكيا ودولاب 6 ابواب تم باحترافية عالية وسرعة في الانجاز شكرا جوهرة جدة", time: "منذ 3 أيام" },
             { icon: womanIcon, bg: "#795548", name: "مها السلمي", text: "والله شغلهم يبيض الوجه ثبتوا لي السرير وراح الصوت نهائيا وغيروا كالون باب الغرفة", time: "منذ 3 أيام" },
-            { icon: manIcon, bg: "#2196f3", name: "ماجد الحربي", text: "جوني في حي السلامة وخلصوا صيانة جميع الدواليب السحاب والعادية في اقل من ساعتين", time: "منذ 4 أيام" },
-            { icon: womanIcon, bg: "#ff5722", name: "لمى الزهراني", text: "تعامل راقي جدا وخصم حقيقي ركبوا لي جزامة إيكيا وبراويز الصالة بميزان دقيق", time: "منذ 5 أيام" },
+            { icon: thumbIcon, bg: "#2196f3", name: "ماجد الحربي", text: "جوني في حي السلامة وخلصوا صيانة جميع الدواليب السحاب والعادية في اقل من ساعتين", time: "منذ 4 أيام" },
+            { icon: heartIcon, bg: "#ff5722", name: "لمى الزهراني", text: "تعامل راقي جدا وخصم حقيقي ركبوا لي جزامة إيكيا وبراويز الصالة بميزان دقيق", time: "منذ 5 أيام" },
             { icon: starIcon, bg: "#00bcd4", name: "بندر العتيبي", text: "كانت ابواب الغرف تحك في البلاط وزنتوها لي بالكامل وصارت تقفل بكل هدوء الله يوفقكم", time: "منذ 5 أيام" },
             { icon: womanIcon, bg: "#8bc34a", name: "أريج باوزير", text: "فكوا غرفة النوم القديمة وركبوا الجديدة مع السراحة والدواليب شغل متقن وسريع", time: "منذ أسبوع" },
-            { icon: checkIcon, bg: "#673ab7", name: "سعد الشهري", text: "أفضل نجار في جدة دقة في المواعيد ونظافة في المكان بعد انتهاء الشغل", time: "منذ أسبوع" }
+            { icon: checkIcon, bg: "#607d8b", name: "سعد الشهري", text: "أفضل نجار في جدة دقة في المواعيد ونظافة في المكان بعد انتهاء الشغل", time: "منذ أسبوع" }
         ];
 
         let currentComment = 0;
